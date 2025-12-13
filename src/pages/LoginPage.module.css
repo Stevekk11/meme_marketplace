@@ -1,0 +1,64 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1d4ed8, #020617);
+}
+
+.card {
+  background-color: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 360px;
+  color: #e5e7eb;
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.8);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.field input {
+  border-radius: 0.5rem;
+  border: 1px solid #4b5563;
+  padding: 0.5rem 0.75rem;
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+.button {
+  width: 100%;
+  border-radius: 9999px;
+  border: none;
+  padding: 0.55rem 0.75rem;
+  background: linear-gradient(to right, #22c55e, #16a34a);
+  color: #022c22;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.75rem;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.error {
+  color: #fecaca;
+  font-size: 0.85rem;
+}
+
