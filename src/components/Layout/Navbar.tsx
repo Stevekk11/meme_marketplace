@@ -19,7 +19,7 @@ export function Navbar() {
     <header className={styles.navbar}>
       <div className={styles.left}>
         <Link to="/dashboard" className={styles.logo}>
-          Meme Admin Panel
+          Meme Admin Panel (i hate react🤢)
         </Link>
         <nav className={styles.navLinks}>
           <NavLink to="/dashboard" className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>

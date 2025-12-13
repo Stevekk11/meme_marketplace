@@ -30,7 +30,7 @@ export function DashboardPage() {
   return (
     <div className={styles.page}>
       <h1 className={styles.heading}>Welcome, {user?.username}</h1>
-      <p className={styles.subtitle}>Meme Admin Panel overview</p>
+      <p className={styles.subtitle}>Meme Admin Panel overview (i hate react🤢)</p>
 
       <section className={styles.statsGrid}>
         <article className={styles.card}>

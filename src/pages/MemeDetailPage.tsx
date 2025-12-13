@@ -86,6 +86,9 @@ export function MemeDetailPage() {
           <p>
             Dimensions: {meme.width} × {meme.height}
           </p>
+            <p>
+                Note: i hate react🤢
+            </p>
           <button type="button" onClick={handleAddToCart} className={styles.addButton}>
             Add to cart
           </button>
