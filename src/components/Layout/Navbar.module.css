@@ -6,6 +6,9 @@
   border-bottom: 1px solid #e2e8f0;
   background-color: #0f172a;
   color: #f9fafb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .left {
