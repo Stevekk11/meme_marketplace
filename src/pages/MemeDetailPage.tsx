@@ -78,7 +78,7 @@ export function MemeDetailPage() {
       </button>
 
       <div className={styles.layout}>
-        <img src={meme.url} alt={meme.name} className={styles.image} />
+        <img src={meme.url} alt={meme.name} className={styles.image} loading="lazy" />
         <div className={styles.info}>
           <h1>{meme.name}</h1>
           <p className={styles.rating}>{'★'.repeat(meme.rating)}{'☆'.repeat(5 - meme.rating)}</p>
@@ -105,7 +105,7 @@ export function MemeDetailPage() {
               className={styles.relatedCard}
               onClick={() => navigate(`/memes/${rm.id}`, { state: { meme: rm } })}
             >
-              <img src={rm.url} alt={rm.name} />
+              <img src={rm.url} alt={rm.name} loading="lazy" />
               <span>{rm.name}</span>
             </button>
           ))}
@@ -114,4 +114,3 @@ export function MemeDetailPage() {
     </div>
   )
 }
-

@@ -12,6 +12,7 @@ export function DashboardPage() {
   const [memesCount, setMemesCount] = useState<number | null>(null)
   const [categories, setCategories] = useState<Set<string> | null>(null)
   const [popularMemes, setPopularMemes] = useState<Meme[]>([])
+  const [memeOfTheDay, setMemeOfTheDay] = useState<Meme | null>(null)
 
   useEffect(() => {
     getMemes()
@@ -20,6 +21,7 @@ export function DashboardPage() {
         setCategories(new Set(memes.map((m) => m.category)))
         const top = [...memes].sort((a, b) => b.rating - a.rating).slice(0, 3)
         setPopularMemes(top)
+        setMemeOfTheDay(memes[Math.floor(Math.random() * memes.length)])
       })
       .catch(() => {
         setMemesCount(0)
@@ -31,6 +33,19 @@ export function DashboardPage() {
     <div className={styles.page}>
       <h1 className={styles.heading}>Welcome, {user?.username}</h1>
       <p className={styles.subtitle}>Meme Admin Panel overview (i hate react🤢)</p>
+
+      {memeOfTheDay && (
+        <section className={styles.memeOfTheDay}>
+          <h2>Meme of the Day</h2>
+          <Link to={`/memes/${memeOfTheDay.id}`} state={{ meme: memeOfTheDay }} className={styles.memeOfTheDayCard}>
+            <img src={memeOfTheDay.url} alt={memeOfTheDay.name} loading="lazy" />
+            <div>
+              <h3>{memeOfTheDay.name}</h3>
+              <p>Rating: {'★'.repeat(memeOfTheDay.rating)}</p>
+            </div>
+          </Link>
+        </section>
+      )}
 
       <section className={styles.statsGrid}>
         <article className={styles.card}>
@@ -70,4 +85,3 @@ export function DashboardPage() {
     </div>
   )
 }
-
