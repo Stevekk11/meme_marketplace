@@ -28,7 +28,7 @@ export function Navbar() {
           <NavLink to="/memes" className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>
             Memes
           </NavLink>
-          <NavLink to="/cart" className={({ isActive }) => (isActive ? styles.activeLink : styles.link)}>
+          <NavLink to="/cart" className={({ isActive }) => `${isActive ? styles.activeLink : styles.link} ${styles.cartLink}`}>
             Cart ({totalItems})
           </NavLink>
         </nav>

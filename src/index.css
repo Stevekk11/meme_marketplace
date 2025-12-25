@@ -96,3 +96,23 @@ body[data-theme='light'] {
     background-color: #f9f9f9;
   }
 }
+
+/* Responsive design */
+@media (max-width: 1023px) {
+  /* Tablet and mobile */
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile */
+  h1 {
+    font-size: 2em;
+  }
+
+  button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+}

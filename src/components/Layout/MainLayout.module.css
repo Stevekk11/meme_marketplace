@@ -12,3 +12,9 @@
   width: 100%;
 }
 
+/* Responsive design */
+@media (max-width: 767px) {
+  .mainContent {
+    padding: 1rem;
+  }
+}

@@ -9,6 +9,8 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  border-radius: 50px;
+  margin: 0.5rem;
 }
 
 .left {
@@ -75,4 +77,53 @@
 
 .themeButton:hover {
   color: #f59e42;
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .left {
+    gap: 1rem;
+  }
+
+  .logo {
+    font-size: 0.9rem;
+  }
+
+  .navLinks {
+    gap: 0.5rem;
+  }
+
+  .link, .activeLink {
+    font-size: 0.85rem;
+  }
+
+  .right {
+    gap: 0.5rem;
+  }
+
+  .username {
+    font-size: 0.8rem;
+  }
+
+  .logoutButton {
+    padding: 0.25rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .themeButton {
+    font-size: 1.1rem;
+    margin-right: 0.25rem;
+  }
+}
+
+/* Hide nav links on mobile to prevent overflow */
+@media (max-width: 767px) {
+  .navLinks :nth-child(1),
+  .navLinks :nth-child(2) {
+    display: none;
+  }
 }

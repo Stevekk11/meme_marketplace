@@ -77,3 +77,23 @@
   background-color: #16a34a;
 }
 
+/* Responsive design */
+@media (max-width: 767px) {
+  .content {
+    padding: 0.5rem 0.7rem 0.7rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .metaRow {
+    font-size: 0.75rem;
+  }
+
+  .detailButton,
+  .addButton {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.5rem;
+  }
+}

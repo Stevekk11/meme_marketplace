@@ -110,3 +110,18 @@
   color: #9ca3af;
   margin: 0 0 0.5rem 0.5rem;
 }
+
+/* Responsive design */
+@media (max-width: 767px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .popularGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .memeOfTheDayCard {
+    max-width: none;
+  }
+}
